@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+
+:root {
+  /*Font*/
+  --font-primary: "Poppins", sans-serif;
+  /*Colors*/
+  --clr-blue-light: hsl(205, 90%, 89%);
+  --clr-blue-medium: hsl(205, 78%, 60%);
+  --clr-blue-mediumDark: hsl(205, 55%, 39%);
+  --clr-blue-dark: hsl(205, 86%, 17%);
+  --clr-white: #fff;
+  /*Shadows*/
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  /*Misc*/
+  --spacing: 0.07rem;
+  --fixed-width: 620px;
+  --radius: 0.5rem;
+  --transition: all 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  background-color: var(--clr-blue-light);
+  color: var(--clr-blue-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  max-height: var(--fixed-width);
+  background: var(--clr-white);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.container:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+#message {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+#message:focus {
+  border: 1px solid #555;
+}
+
+#submitButton {
+  background: var(--clr-blue-medium);
+  outline: transparent;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-primary);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#submitButton:hover {
+  background-color: var(--clr-blue-mediumDark);
+  color: var(--clr-white);
+}
+
+.error_message {
+  display: none;
+}
+
+.show {
+  display: block;
+}
